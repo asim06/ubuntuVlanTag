@@ -1,0 +1,21 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:
+      addresses: [192.168.2.26/24]	
+      gateway4: 192.168.2.1
+      nameservers:
+        addresses: [192.168.2.1,8.8.8.8]
+
+  vlans:
+    enp0s3.20:
+       id: 20
+       link: enp0s3
+       addresses: [192.168.5.5/24]
+       gateway4: 192.168.5.1 
+       nameservers:
+           addresses: [192.168.5.1,8.8.8.8]
+  
+  version: 2
+  
+  # Example Vlan Tagging via Netplan
